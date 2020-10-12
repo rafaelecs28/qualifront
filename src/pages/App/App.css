@@ -1,0 +1,24 @@
+.App {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex;
+}
+.App main{
+    margin-left: 20px;
+}
+
+@media (max-width: 1000px){
+    .App {
+        flex-direction: column;
+    }
+    .App main{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .App aside{
+        width: 100%;
+    }
+}
