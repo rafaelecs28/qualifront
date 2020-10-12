@@ -107,8 +107,7 @@ function App(){
       setUf(e.target.value);
       setSexo(e.target.value);
       setPerfil(e.target.value);
-      console.log(users.filter(user => user.cpfx === parseInt(cpfx)))
-      if(users.filter(user => user.cpfx === parseInt(cpfx)).length > 0){
+      if(users.filter(user => user.cpf === parseInt(cpf)).length > 0){
         alert(`Já existe usuário para o cpf: ${cpfx}`)
       }
       else if(users.filter(user => user.email === email).length > 0){
