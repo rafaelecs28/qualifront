@@ -107,10 +107,10 @@ function App(){
       setUf(e.target.value);
       setSexo(e.target.value);
       setPerfil(e.target.value);
-      if(users.filter(user => user.cpfx === parseInt(cpfx)) === true){
+      if(users.filter(user => user.cpfx === parseInt(cpfx))){
         alert(`Já existe usuário para o cpf: ${cpfx}`)
       }
-      else if(users.filter(user => user.email === email) === true){
+      else if(users.filter(user => user.email === email)){
         alert(`Já existe usuário para o e-mail: ${email}`)
       } else{
         await api.post('/users', {
@@ -129,7 +129,6 @@ function App(){
   async function handleDeleteUser(e){
     e.preventDefault()
     const cpf = parseInt(e.target.value)
-    console.log(cpf)
     await api.delete('/users/delete/'+cpf).then(function(data){
       //if(users.filter(user => user.nome === NOME).nome === NOME )
       if(data.status === 200){
