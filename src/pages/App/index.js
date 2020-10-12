@@ -103,7 +103,6 @@ function App(){
     }
     else{
       setControle(0)
-      console.log('entra')
       //e.preventDefault()
       setUf(e.target.value);
       setSexo(e.target.value);
@@ -128,6 +127,7 @@ function App(){
   */
  
   async function handleDeleteUser(e){
+    e.preventDefault()
     const cpf = parseInt(e.target.value)
     console.log(cpf)
     await api.delete('/users/delete/'+cpf).then(function(data){
