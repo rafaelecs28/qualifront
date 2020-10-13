@@ -50,7 +50,7 @@ function App(){
   const handleAtualizaUser = (e) =>{ 
     e.preventDefault();
     setControle(1);
-    let usuario = users.filter(user => user.cpf === parseInt(e.target.value))
+    let usuario = users.filter(user => user.cpf === e.target.value)
     setNome(usuario[0].nome)
     mudandoCPF(cpfMask(String(usuario[0].cpf)))
     setUf(usuario[0].uf);
