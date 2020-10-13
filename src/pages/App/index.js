@@ -126,7 +126,7 @@ function App(){
  
   async function handleDeleteUser(e){
     e.preventDefault()
-    const cpf = parseInt(e.target.value)
+    const cpf = e.target.value
     await api.delete('/users/delete/'+cpf).then(function(data){
       //if(users.filter(user => user.nome === NOME).nome === NOME )
       if(data.status === 200){
