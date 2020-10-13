@@ -83,14 +83,12 @@ function App(){
   async function handleAddUser(e){
     //e.preventDefault();
     var cpf = cpfx.split('.').join('')
-    cpf = parseInt(cpf.split('-').join(''))
+    cpf = cpf.split('-').join('')
     var telefone = telefonex  !== '' ? String(telefonex) : ''
     if(telefone !== ''){
       telefone = telefone.split(' ').join('').split('-').join('').split(')').join('').split('(').join('')
     }
     var cep = cepx !== '' ? String(cepx).split('-').join('') : ''
-    cep = parseInt(cep)
-    parseInt(password)
     if (controle === 1){
       setUf(e.target.value);
       setSexo(e.target.value);
