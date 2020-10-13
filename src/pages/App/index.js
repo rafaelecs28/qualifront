@@ -40,7 +40,7 @@ function App(){
 
   useEffect(() =>{
     async function carregandoUsuarios(){
-      const response = await api.get('/');
+      const response = await api.get('/usuarios/'+Role);
       
       setUsers(response.data)
     }
