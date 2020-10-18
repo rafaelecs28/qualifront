@@ -1,4 +1,4 @@
-export const TOKEN_KEY = "QUALICORP!;
+export const TOKEN_KEY = "@QUALICORP!@#$;
 export var USER_ROLE = '';
 export var CPF_ROLE = 0;
 export var NOME = 's';
